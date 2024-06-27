@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.26)
+set(COMPONENT_NAME abci)
+
+include_directories(../../)
+aux_source_directory(. SRCS)
+list(REMOVE_ITEM SRCS "./abcDarUnfold2.c")
+list(REMOVE_ITEM SRCS "./abciUnfold2.c")
+list(REMOVE_ITEM SRCS "./abcEspresso.c")
+list(REMOVE_ITEM SRCS "./fahout_cut.c")
+list(REMOVE_ITEM SRCS "./abcFpga.c")
+list(REMOVE_ITEM SRCS "./abcPlace.c")
+add_library(${COMPONENT_NAME} ${SRCS})
+add_library(${PROJECT_NAME}::${SUBFOLDER_NAME}::${COMPONENT_NAME} ALIAS ${COMPONENT_NAME})
