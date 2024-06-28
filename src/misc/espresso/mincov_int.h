@@ -12,7 +12,7 @@
 #include "sparse.h"
 #include "mincov.h"
 
-#include "util_hack.h" // added
+#include "misc/util/util_hack.h" // added
 
 
 typedef struct stats_struct stats_t;

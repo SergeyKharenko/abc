@@ -10,6 +10,7 @@
 #ifndef ABC__misc__espresso__sparse_h
 #define ABC__misc__espresso__sparse_h
 
+#include "util_old.h"
 
 ABC_NAMESPACE_HEADER_START
 

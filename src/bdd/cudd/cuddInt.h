@@ -70,7 +70,7 @@
 #endif
 
 #include <math.h>
-#include "cudd.h"
+#include "bdd/cudd/cudd.h"
 #include "misc/st/st.h"
 
 ABC_NAMESPACE_HEADER_START
@@ -196,10 +196,12 @@ ABC_NAMESPACE_HEADER_START
 #define CUDD_GEN_EMPTY 0
 #define CUDD_GEN_NONEMPTY 1
 
-
 /*---------------------------------------------------------------------------*/
 /* Stucture declarations                                                     */
 /*---------------------------------------------------------------------------*/
+
+struct DdManager;
+typedef DdNode *DdNodePtr;
 
 struct DdGen {
     DdManager   *manager;
@@ -247,25 +249,10 @@ typedef struct DdHook {         /* hook list element */
     struct DdHook *next;        /* next element in the list */
 } DdHook;
 
-/*
-#if SIZEOF_VOID_P == 8 && SIZEOF_INT == 4
-typedef long ptrint;
-typedef unsigned long ptruint;
-#else
-typedef int ptrint;
-typedef unsigned int ptruint;
-#endif
-*/
-
-typedef ABC_PTRINT_T ptrint;
-typedef ABC_PTRUINT_T ptruint;
-
 #ifdef __osf__
 #pragma pointer_size save
 #pragma pointer_size short
 #endif
-
-typedef DdNode *DdNodePtr;
 
 /* Generic local cache item. */
 typedef struct DdLocalCacheItem {

@@ -290,8 +290,19 @@ struct DdNode {
 #pragma pointer_size restore
 #endif
 
-typedef struct DdManager DdManager;
+/*
+#if SIZEOF_VOID_P == 8 && SIZEOF_INT == 4
+typedef long ptrint;
+typedef unsigned long ptruint;
+#else
+typedef int ptrint;
+typedef unsigned int ptruint;
+#endif
+*/
+typedef ABC_PTRINT_T ptrint;
+typedef ABC_PTRUINT_T ptruint;
 
+typedef struct DdManager DdManager;
 typedef struct DdGen DdGen;
 
 /* These typedefs for arbitrary precision arithmetic should agree with

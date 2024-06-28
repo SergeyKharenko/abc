@@ -16,7 +16,7 @@
 #include "sparse.h"
 #include "mincov.h"
 
-#include "util_hack.h" // added
+#include "misc/util/util_hack.h" // added
 
 #define ABC__misc__espresso__espresso_h
 #define print_time(t)    util_print_time(t)

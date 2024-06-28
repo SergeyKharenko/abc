@@ -6,3 +6,6 @@ aux_source_directory(. SRCS)
 list(REMOVE_ITEM SRCS "./wlc.c")
 add_library(${COMPONENT_NAME} ${SRCS})
 add_library(${PROJECT_NAME}::${SUBFOLDER_NAME}::${COMPONENT_NAME} ALIAS ${COMPONENT_NAME})
+target_link_libraries(${COMPONENT_NAME}
+        ${PROJECT_NAME}::misc::tim
+)

@@ -1,2 +1,12 @@
+set(SUBFOLDER_NAME sat)
 
-
+add_subdirectory(bmc)
+add_subdirectory(bsat)
+add_subdirectory(bsat2)
+add_subdirectory(cnf)
+add_subdirectory(csat)
+add_subdirectory(glucose)
+add_subdirectory(glucose2)
+add_subdirectory(msat)
+add_subdirectory(satoko)
+add_subdirectory(xsat)
