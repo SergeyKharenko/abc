@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 3.26)
 
 project(abc)
 add_compile_options(-w)
-add_compile_definitions(LIN64)
 add_compile_definitions(
         ABC_NAMESPACE=abc
         ABC_USE_PTHREADS
