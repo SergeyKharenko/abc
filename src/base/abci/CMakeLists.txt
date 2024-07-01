@@ -9,6 +9,7 @@ list(REMOVE_ITEM SRCS "./abcEspresso.c")
 list(REMOVE_ITEM SRCS "./fahout_cut.c")
 list(REMOVE_ITEM SRCS "./abcFpga.c")
 list(REMOVE_ITEM SRCS "./abcPlace.c")
+set_source_files_properties(${SRCS} PROPERTIES LANGUAGE CXX)
 add_library(${COMPONENT_NAME} ${SRCS})
 add_library(${PROJECT_NAME}::${SUBFOLDER_NAME}::${COMPONENT_NAME} ALIAS ${COMPONENT_NAME})
 target_link_libraries(${COMPONENT_NAME}
@@ -74,6 +75,7 @@ target_link_libraries(${COMPONENT_NAME}
         ${PROJECT_NAME}::proof::fra
         ${PROJECT_NAME}::proof::fraig
         ${PROJECT_NAME}::proof::int
+        ${PROJECT_NAME}::proof::live
         ${PROJECT_NAME}::proof::pdr
         ${PROJECT_NAME}::proof::ssc
         ${PROJECT_NAME}::proof::ssw

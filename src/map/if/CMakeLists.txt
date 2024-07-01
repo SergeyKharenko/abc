@@ -1,10 +1,19 @@
 cmake_minimum_required(VERSION 3.26)
 set(COMPONENT_NAME if)
 
+add_subdirectory(acd)
+
 include_directories(../../)
 include_directories(acd)
+
 aux_source_directory(. SRCS)
 list(REMOVE_ITEM SRCS "./ifCheck.c")
-list(APPEND SRCS "./acd/ac_wrapper.cpp")
+set_source_files_properties(${SRCS} PROPERTIES LANGUAGE CXX)
 add_library(${COMPONENT_NAME} ${SRCS})
 add_library(${PROJECT_NAME}::${SUBFOLDER_NAME}::${COMPONENT_NAME} ALIAS ${COMPONENT_NAME})
+target_link_libraries(${COMPONENT_NAME}
+        ${PROJECT_NAME}::map::acd
+        ${PROJECT_NAME}::bdd::extrab
+        ${PROJECT_NAME}::opt::dau
+        ${PROJECT_NAME}::sat::cnf
+        ${PROJECT_NAME}::sat::bsat)
