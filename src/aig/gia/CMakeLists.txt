@@ -14,6 +14,7 @@ target_link_libraries(${COMPONENT_NAME}
         ${PROJECT_NAME}::base::cmd
         ${PROJECT_NAME}::base::wlc
         ${PROJECT_NAME}::bool::bdc
+        ${PROJECT_NAME}::bool::rsb
         ${PROJECT_NAME}::map::mpm
         ${PROJECT_NAME}::misc::tim
         ${PROJECT_NAME}::opt::dar

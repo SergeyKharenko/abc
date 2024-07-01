@@ -11,4 +11,6 @@ target_link_libraries(${COMPONENT_NAME}
         ${PROJECT_NAME}::base::wln
         ${PROJECT_NAME}::map::if
         ${PROJECT_NAME}::misc::tim
+        ${PROJECT_NAME}::proof::acec
+        ${PROJECT_NAME}::proof::pdr
 )
