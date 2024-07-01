@@ -16,7 +16,6 @@ target_link_libraries(${COMPONENT_NAME}
         ${PROJECT_NAME}::bool::bdc
         ${PROJECT_NAME}::map::mpm
         ${PROJECT_NAME}::misc::tim
-
         ${PROJECT_NAME}::opt::dar
         ${PROJECT_NAME}::proof::abs
         ${PROJECT_NAME}::proof::dch

@@ -5,6 +5,8 @@ add_compile_options(-w)
 add_compile_definitions(LIN64)
 add_compile_definitions(
         ABC_NAMESPACE=abc
+        ABC_USE_PTHREADS
+        ABC_USE_READLINE
         ABC_USE_CUDD=1
         ABC_USE_STDINT_H=1)
 

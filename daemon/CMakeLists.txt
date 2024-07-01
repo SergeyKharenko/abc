@@ -53,4 +53,5 @@ target_link_libraries(abc_daemon
         abc::aig::gia
 #        abc::sat::glucose
 #        abc::sat::glucose2
+        readline
 )
